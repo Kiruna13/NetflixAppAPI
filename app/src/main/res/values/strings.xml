@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">NetflixAppAPI</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">Netflix App API</string>
+    <string name="title_films">Films</string>
+    <string name="title_series">Series</string>
 </resources>
