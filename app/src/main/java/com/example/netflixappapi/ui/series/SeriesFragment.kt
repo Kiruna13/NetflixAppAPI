@@ -12,7 +12,7 @@ import com.example.netflixappapi.databinding.FragmentSeriesBinding
 
 class SeriesFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: SeriesViewModel
+    private lateinit var seriesViewModel: SeriesViewModel
     private var _binding: FragmentSeriesBinding? = null
 
     // This property is only valid between onCreateView and
@@ -24,14 +24,14 @@ class SeriesFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
+        seriesViewModel =
                 ViewModelProvider(this).get(SeriesViewModel::class.java)
 
         _binding = FragmentSeriesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textSeries
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        seriesViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
