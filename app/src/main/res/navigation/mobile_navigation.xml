@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/navigation_films"
-        android:name="com.example.netflixappapi.ui.home.HomeFragment"
+        android:name="com.example.netflixappapi.ui.movies.MoviesFragment"
         android:label="@string/title_films"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_movies" />
 
     <fragment
         android:id="@+id/navigation_series"
-        android:name="com.example.netflixappapi.ui.dashboard.DashboardFragment"
+        android:name="com.example.netflixappapi.ui.series.SeriesFragment"
         android:label="@string/title_series"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_series" />
 
 </navigation>

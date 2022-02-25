@@ -1,10 +1,10 @@
-package com.example.netflixappapi.ui.dashboard
+package com.example.netflixappapi.ui.series
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class SeriesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
