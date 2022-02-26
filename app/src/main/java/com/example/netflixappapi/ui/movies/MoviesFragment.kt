@@ -31,7 +31,7 @@ class MoviesFragment : Fragment() {
         _binding = FragmentMoviesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val imgView: ImageView = binding.imgMovie
+        //val imgView: ImageView = binding.imgMovie
         moviesViewModel.text.observe(viewLifecycleOwner, Observer {
 
         })
