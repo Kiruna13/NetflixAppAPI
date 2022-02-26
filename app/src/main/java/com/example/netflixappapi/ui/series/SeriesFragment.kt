@@ -30,9 +30,9 @@ class SeriesFragment : Fragment() {
         _binding = FragmentSeriesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSeries
+        //val textView: TextView = binding.textSeries
         seriesViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+            //textView.text = it
         })
         return root
     }
