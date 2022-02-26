@@ -39,22 +39,24 @@
 
 
             <com.google.android.flexbox.FlexboxLayout
-                android:id="@+id/list_beneficiaire"
+                android:id="@+id/film"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 app:flexDirection="column"
+                android:layout_marginHorizontal="10dp"
                 app:justifyContent="space_between"
                 app:flexWrap="wrap"
                 tools:ignore="MissingClass,UsingOnClickInXml">
 
-
+                <!--Affichage d'un film et de sa description-->
                 <com.google.android.flexbox.FlexboxLayout
-                    android:id="@+id/img1"
+                    android:id="@+id/imgFilm"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     app:flexDirection="row"
+                    android:layout_marginBottom="10dp"
                     app:flexWrap="wrap"
                     tools:ignore="MissingClass,UsingOnClickInXml">
                     <ImageView
@@ -63,24 +65,27 @@
                         android:src="@drawable/img"
                         />
                     <com.google.android.flexbox.FlexboxLayout
-                        android:id="@+id/img1Text"
+                        android:id="@+id/infosFilm"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical"
                         app:flexDirection="column"
                         app:flexWrap="wrap"
+                        android:layout_marginLeft="10dp"
                         tools:ignore="MissingClass,UsingOnClickInXml">
                         <com.google.android.flexbox.FlexboxLayout
-                            android:id="@+id/img1TextApi"
+                            android:id="@+id/titreFilm"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             app:flexDirection="column"
                             app:flexWrap="wrap"
+                            android:layout_marginBottom="10dp"
                             tools:ignore="MissingClass,UsingOnClickInXml">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textStyle="bold"
                                 android:text="Titre:"
                                 />
                             <TextView
@@ -90,9 +95,9 @@
                                 />
                         </com.google.android.flexbox.FlexboxLayout>
                         <com.google.android.flexbox.FlexboxLayout
-                            android:id="@+id/img1TextApi2"
+                            android:id="@+id/paysFilm"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             app:flexDirection="column"
                             app:flexWrap="wrap"
@@ -100,6 +105,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textStyle="bold"
                                 android:text="Pays de difusion:"
                                 />
                             <TextView
@@ -109,101 +115,10 @@
                                 />
                         </com.google.android.flexbox.FlexboxLayout>
                     </com.google.android.flexbox.FlexboxLayout>
-
                 </com.google.android.flexbox.FlexboxLayout>
-
-
-
-                <com.google.android.flexbox.FlexboxLayout
-                    android:id="@+id/img2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    app:flexDirection="row"
-                    app:justifyContent="space_between"
-                    app:flexWrap="wrap"
-                    tools:ignore="MissingClass,UsingOnClickInXml">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/img2"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        />
-                </com.google.android.flexbox.FlexboxLayout>
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img2"/>
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-
-                    android:src="@drawable/img3"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
-
-                    android:src="@drawable/img4"
-                    />
-
             </com.google.android.flexbox.FlexboxLayout>
 
         </ScrollView>
-
     </LinearLayout>
 
 
