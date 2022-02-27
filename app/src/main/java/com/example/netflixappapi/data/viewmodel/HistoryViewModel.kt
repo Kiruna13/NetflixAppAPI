@@ -2,6 +2,7 @@ package com.example.netflixappapi.data.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.netflixappapi.data.AppDatabase
 import com.example.netflixappapi.data.model.History
@@ -22,6 +23,10 @@ class HistoryViewModel(application: Application) : AndroidViewModel(application)
         viewModelScope.launch(Dispatchers.IO) {
             repository.addHistory(history)
         }
+    }
+
+    fun getUserHistories(userId : Int): List<History> {
+        return repository.getUserHistories(userId)
     }
 
 }

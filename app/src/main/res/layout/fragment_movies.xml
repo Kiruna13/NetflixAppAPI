@@ -20,16 +20,19 @@
             android:layout_height="wrap_content"
             android:text="Rechercher un film"
             android:layout_marginStart="10dp"
-
             tools:ignore="MissingConstraints" />
 
-        <EditText
+        <AutoCompleteTextView
+            android:id="@+id/search_film_bar"
+            android:completionThreshold="1"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/full_border"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="LabelFor,MissingConstraints" />
 
         <ScrollView
             android:layout_width="match_parent"
