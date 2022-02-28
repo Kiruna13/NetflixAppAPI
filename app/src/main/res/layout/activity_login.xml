@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/backgroud"
         android:clipToPadding="false"
-        android:contentDescription="For more visit www.materialuiux.com"
         tools:ignore="HardcodedText">
 
         <fontsmaterialuiux.cairoTextView
@@ -21,7 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="76dp"
-            android:contentDescription="For more visit www.materialuiux.com"
             android:text="sign in"
             android:textColor="@color/signupsignintextcolor"
             android:textSize="@dimen/textsize_28"
@@ -40,9 +38,7 @@
             android:layout_marginRight="51dp"
             android:layout_marginBottom="27dp"
             android:background="@drawable/rect"
-            android:contentDescription="For more visit www.materialuiux.com"
             android:orientation="vertical">
-
 
             <EditText
                 android:id="@+id/id_Email_textInputLayout"
@@ -52,8 +48,7 @@
                 android:layout_marginTop="@dimen/marign_33"
                 android:layout_marginRight="23dp"
                 android:hint="email"
-                android:textColor="@color/primarytext"
-                android:textSize="@dimen/textsize_18">
+                android:textColor="@color/primarytext">
 
             </EditText>
 
