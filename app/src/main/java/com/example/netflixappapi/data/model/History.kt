@@ -8,5 +8,6 @@ data class History(
     @PrimaryKey(autoGenerate = true)
     val historyId: Int,
     val research: String,
+    val type: String,
     val userHistoryId : Int
 )

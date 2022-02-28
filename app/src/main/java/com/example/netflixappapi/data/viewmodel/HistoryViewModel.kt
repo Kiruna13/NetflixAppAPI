@@ -25,8 +25,8 @@ class HistoryViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-    fun getUserHistories(userId : Int): List<History> {
-        return repository.getUserHistories(userId)
+    fun getUserHistories(userId : Int, type : String): List<History> {
+        return repository.getUserHistories(userId, type)
     }
 
 }

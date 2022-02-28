@@ -11,6 +11,6 @@ interface HistoryDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addHistory(history: History)
 
-    @Query("SELECT * from history_table WHERE userHistoryId = :userId")
-    fun getUserHistories(userId : Int): List<History>
+    @Query("SELECT * from history_table WHERE userHistoryId = :userId AND type = :type")
+    fun getUserHistories(userId : Int, type : String): List<History>
 }

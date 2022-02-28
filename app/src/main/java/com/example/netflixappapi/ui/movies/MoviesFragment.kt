@@ -16,16 +16,8 @@ import com.example.netflixappapi.R
 import com.example.netflixappapi.data.model.History
 import com.example.netflixappapi.data.viewmodel.HistoryViewModel
 import com.example.netflixappapi.databinding.FragmentMoviesBinding
-import kotlinx.coroutines.*
-import kotlin.coroutines.CoroutineContext
 
-
-class MoviesFragment : Fragment(), CoroutineScope {
-
-    private var job: Job = Job()
-
-    override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Main + job
+class MoviesFragment : Fragment() {
 
     private lateinit var moviesViewModel: MoviesViewModel
     private lateinit var mHistoryViewModel: HistoryViewModel
@@ -75,7 +67,7 @@ class MoviesFragment : Fragment(), CoroutineScope {
     }
 
     fun getHistories(): List<History> {
-        return mHistoryViewModel.getUserHistories(2)
+        return mHistoryViewModel.getUserHistories(2, "movie")
     }
 
     private fun getSearchedHistoryList(historyList: List<History>): MutableList<String> {
@@ -95,14 +87,13 @@ class MoviesFragment : Fragment(), CoroutineScope {
                     return
                 }
             }
-            val history = History(0, searchedFilm, 2)
+            val history = History(0, searchedFilm, "movie", 2)
             mHistoryViewModel.addHistory(history)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        job.cancel()
         _binding = null
     }
 }

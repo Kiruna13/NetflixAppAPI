@@ -9,8 +9,8 @@ class HistoryRepository(private val historyDao: HistoryDao) {
         historyDao.addHistory(history)
     }
 
-    fun getUserHistories(userId : Int): List<History> {
-        return historyDao.getUserHistories(userId)
+    fun getUserHistories(userId : Int, type : String): List<History> {
+        return historyDao.getUserHistories(userId, type)
     }
 
 }
