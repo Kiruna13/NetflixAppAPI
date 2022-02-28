@@ -9,4 +9,11 @@ class UserRepository(private val userDao: UserDao) {
         userDao.addUser(user)
     }
 
+    fun getAllUsers() : List<User> {
+        return userDao.getAllUsers()
+    }
+
+    fun getUser(email : String) : User {
+        return userDao.getUser(email)
+    }
 }

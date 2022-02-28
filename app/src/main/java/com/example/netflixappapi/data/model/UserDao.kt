@@ -8,6 +8,9 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addUser(user: User)
 
-    @Query("SELECT password FROM user_table WHERE email = :email")
-    fun getUserPassword(email : String) : String
+    @Query("SELECT * FROM user_table")
+    fun getAllUsers() : List<User>
+
+    @Query("SELECT * FROM user_table WHERE email = :email")
+    fun getUser(email : String) : User
 }

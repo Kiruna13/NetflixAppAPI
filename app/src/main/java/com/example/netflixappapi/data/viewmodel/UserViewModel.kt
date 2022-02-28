@@ -24,4 +24,11 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun getAllUsers() : List<User> {
+        return repository.getAllUsers()
+    }
+
+    fun getUser(email : String) : User {
+        return repository.getUser(email)
+    }
 }
