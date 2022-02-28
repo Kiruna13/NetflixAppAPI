@@ -26,9 +26,9 @@ class Authentication : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        authBtn = findViewById(R.id.login)
-        emailField = findViewById(R.id.email)
-        passwordField = findViewById(R.id.password)
+        authBtn = findViewById(R.id.id_signIn_Button)
+        emailField = findViewById(R.id.id_Email_textInputLayout)
+        passwordField = findViewById(R.id.id_Password_textInputLayout)
 
         authBtn.setOnClickListener {
             onSignInRequest()
