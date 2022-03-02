@@ -14,7 +14,7 @@
         android:clipToPadding="false"
         tools:ignore="HardcodedText">
 
-        <fontsmaterialuiux.cairoTextView
+        <TextView
             android:id="@+id/id_SignIn_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,14 +100,13 @@
 
         </LinearLayout>
 
-        <fontsmaterialuiux.cairoTextView
+        <TextView
             android:id="@+id/id_SignUP_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:layout_marginBottom="18dp"
-            android:contentDescription="For more visit www.materialuiux.com"
             android:textColor="@color/signupsignintextcolor"
             android:textSize="@dimen/textsize_18"
             android:textStyle="bold" />
