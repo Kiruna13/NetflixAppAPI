@@ -109,6 +109,7 @@
             android:layout_marginBottom="18dp"
             android:textColor="@color/signupsignintextcolor"
             android:textSize="@dimen/textsize_18"
+            android:text=""
             android:textStyle="bold" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

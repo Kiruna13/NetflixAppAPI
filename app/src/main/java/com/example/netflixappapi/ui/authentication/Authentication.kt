@@ -65,7 +65,7 @@ class Authentication : AppCompatActivity() {
         }
     }
 
-    private fun registerUser(email : String, password: String) {
+    fun registerUser(email : String, password: String) {
         val user = User(0, email, toMd5(password))
         mUserViewModel.addUser(user)
         emailField.text.clear()
