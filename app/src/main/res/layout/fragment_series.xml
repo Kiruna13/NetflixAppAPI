@@ -41,9 +41,9 @@
 
 
             <com.google.android.flexbox.FlexboxLayout
-                android:id="@+id/serie"
+                android:id="@+id/listSeries"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:flexDirection="column"
                 android:layout_marginHorizontal="10dp"
@@ -51,73 +51,6 @@
                 app:flexWrap="wrap"
                 tools:ignore="MissingClass,UsingOnClickInXml">
 
-                <!--Affichage d'un film et de sa description-->
-                <com.google.android.flexbox.FlexboxLayout
-                    android:id="@+id/imgSerie"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    app:flexDirection="row"
-                    android:layout_marginBottom="10dp"
-                    app:flexWrap="wrap"
-                    tools:ignore="MissingClass,UsingOnClickInXml">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/img"
-                        />
-                    <com.google.android.flexbox.FlexboxLayout
-                        android:id="@+id/infosSerie"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        app:flexDirection="column"
-                        app:flexWrap="wrap"
-                        android:layout_marginLeft="10dp"
-                        tools:ignore="MissingClass,UsingOnClickInXml">
-                        <com.google.android.flexbox.FlexboxLayout
-                            android:id="@+id/titreSerie"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:flexDirection="column"
-                            app:flexWrap="wrap"
-                            android:layout_marginBottom="10dp"
-                            tools:ignore="MissingClass,UsingOnClickInXml">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textStyle="bold"
-                                android:text="Titre:"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="bla bla bla le pays:"
-                                />
-                        </com.google.android.flexbox.FlexboxLayout>
-                        <com.google.android.flexbox.FlexboxLayout
-                            android:id="@+id/paysSerie"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:flexDirection="column"
-                            app:flexWrap="wrap"
-                            tools:ignore="MissingClass,UsingOnClickInXml">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textStyle="bold"
-                                android:text="Pays de difusion:"
-                                />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Pays bla bla bla:"
-                                />
-                        </com.google.android.flexbox.FlexboxLayout>
-                    </com.google.android.flexbox.FlexboxLayout>
-                </com.google.android.flexbox.FlexboxLayout>
             </com.google.android.flexbox.FlexboxLayout>
 
         </ScrollView>
