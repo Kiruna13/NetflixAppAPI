@@ -8,7 +8,6 @@ L'utilisateur possède également un historique lui permettant ainsi de facileme
 ### Technologies utilisées
 > - Kotlin
 > - Retrofit : appels API
-> - Glide : gestion des images
 > - Room : base de données
 > - JUnit : tests unitaires
 
