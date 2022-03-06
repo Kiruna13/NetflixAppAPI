@@ -29,6 +29,9 @@ import com.google.android.flexbox.FlexWrap
 class SeriesFragment : Fragment() {
 
     private val netflixViewModel by activityViewModels<NetflixViewModel>()
+
+    private val userIdConnected = activity?.intent?.getIntExtra("userId", 0)
+
     private lateinit var mHistoryViewModel: HistoryViewModel
     private lateinit var searchBar: AutoCompleteTextView
 
@@ -161,8 +164,8 @@ class SeriesFragment : Fragment() {
         netflixViewModel.getSeries()
     }
 
-    fun getHistories(): List<History> {
-        return mHistoryViewModel.getUserHistories(2, "series")
+    private fun getHistories(): List<History> {
+        return mHistoryViewModel.getUserHistories(userIdConnected!!, "series")
     }
 
     private fun getSearchedHistoryList(historyList: List<History>): MutableList<String> {

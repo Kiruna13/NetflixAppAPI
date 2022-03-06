@@ -21,10 +21,12 @@ import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
 import com.google.android.flexbox.FlexboxLayout
 import com.squareup.picasso.Picasso
+import kotlin.properties.Delegates
 
 
 class MoviesFragment : Fragment() {
     private val netflixViewModel by activityViewModels<NetflixViewModel>()
+    private var userIdConnected : Int = 0
     private lateinit var mHistoryViewModel: HistoryViewModel
     private lateinit var searchBar: AutoCompleteTextView
 
@@ -41,12 +43,14 @@ class MoviesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        userIdConnected = activity?.intent!!.getIntExtra("userId", 0)
+        println(userIdConnected)
         mHistoryViewModel = ViewModelProvider(this).get(HistoryViewModel::class.java)
         searchBar = view.findViewById(R.id.search_film_bar) as AutoCompleteTextView
 
         //Affiche l'historique quand le champ de recherche est pressé
         searchBar.setOnClickListener {
-            val historyList = getHistories()
+            val historyList = getHistories(userIdConnected)
             val historySearchedList = getSearchedHistoryList(historyList)
             searchBar.setAdapter(context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, historySearchedList) })
         }
@@ -54,7 +58,7 @@ class MoviesFragment : Fragment() {
         //Envoie la recherche à l'historique si le bouton "entrer" est pressé
         searchBar.setOnEditorActionListener(TextView.OnEditorActionListener { textView, i, keyEvent ->
             if (i == EditorInfo.IME_ACTION_DONE) {
-                insertSearchedFilmToDatabase()
+                insertSearchedFilmToDatabase(userIdConnected)
                 searchBar.clearFocus()
             }
             false
@@ -156,8 +160,8 @@ class MoviesFragment : Fragment() {
         netflixViewModel.getMovies()
     }
 
-    fun getHistories(): List<History> {
-        return mHistoryViewModel.getUserHistories(2, "movie")
+    fun getHistories(userIdConnected : Int): List<History> {
+        return mHistoryViewModel.getUserHistories(userIdConnected, "movie")
     }
 
     private fun getSearchedHistoryList(historyList: List<History>): MutableList<String> {
@@ -168,16 +172,16 @@ class MoviesFragment : Fragment() {
         return historySearchedList
     }
 
-    private fun insertSearchedFilmToDatabase() {
+    private fun insertSearchedFilmToDatabase(userIdConnected: Int) {
         val searchedFilm = searchBar.text.toString()
         if (!TextUtils.isEmpty(searchedFilm)) {
-            val existingHistories = getHistories()
+            val existingHistories = getHistories(userIdConnected)
             for (history : History in existingHistories) {
                 if (history.research == searchedFilm) {
                     return
                 }
             }
-            val history = History(0, searchedFilm, "movie", 2)
+            val history = History(0, searchedFilm, "movie", userIdConnected)
             mHistoryViewModel.addHistory(history)
         }
     }

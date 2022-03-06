@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.example.netflixappapi.MainActivity
 import com.example.netflixappapi.R
 import com.example.netflixappapi.data.model.User
 import com.example.netflixappapi.data.viewmodel.UserViewModel
@@ -58,7 +59,7 @@ class Authentication : AppCompatActivity() {
     private fun authenticateUser(email : String, password : String) {
         val dbUser = mUserViewModel.getUser(email)
         if (dbUser.password == toMd5(password)) {
-            //nextActivity(dbUser)
+            nextActivity(dbUser)
             Toast.makeText(this, "Authentification réussie", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "Authentification échouée : mauvais mot de passe", Toast.LENGTH_SHORT).show()
@@ -78,9 +79,9 @@ class Authentication : AppCompatActivity() {
         return BigInteger(1, md.digest(input.toByteArray())).toString(16).padStart(32, '0')
     }
 
-    /*private fun nextActivity(dbUser: User) {
+    private fun nextActivity(dbUser: User) {
         val intent : Intent = Intent(this, MainActivity::class.java)
         intent.putExtra("userId", dbUser.userId)
         startActivity(intent)
-    }*/
+    }
 }
