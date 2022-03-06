@@ -16,4 +16,4 @@ L'utilisateur possède également un historique lui permettant ainsi de facileme
 
 ### Ressources
 > - Trello : https://trello.com/b/yEWSevEd/api-netflix
-> - Vidéo de présentation : <à venir>
+> - Vidéo de présentation : https://www.youtube.com/watch?v=Gbe5xY12ZL8
